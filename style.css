@@ -1,0 +1,591 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  
+}
+
+body{    
+    background: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+  .goalcraft-header {
+    background:linear-gradient(
+      147.63deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.01)
+       );
+       border: 1px solid #ffffff;
+    backdrop-filter: blur(30px);
+    
+    padding: 10px; /* Add some padding */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 90px;
+    position: fixed;
+    display: inline-block;
+    z-index: 4;
+  }
+
+  /* CSS for goalcraft-logo */
+  .goalcraft-logo {
+    font-family: 'Seymour One', sans-serif; /* Apply custom font */
+    font-size: 24px; /* Adjust font size */
+    height: 15px;
+            position: absolute;
+            margin: 0 !important;
+            right: 700px;
+            bottom: 46px;
+            display: inline-block;
+            z-index: 1;
+            color: #ffffff;
+  }
+
+  #form{
+      margin-left: 60%;
+      padding:40px;
+      box-shadow: 10px 10px 5px rgb(80, 11, 77);
+      margin-top: 3%;
+      width: 500px;
+  border-radius: var(--br-24xl);
+  background: linear-gradient(
+    147.63deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.14)
+  );
+  backdrop-filter: blur(30px);
+  border: 4px solid var(--color-white);
+  border-radius: 8px;
+  }
+  h1{
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: 30px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Montserrat';
+  font:'Montserrat';
+    
+  }
+  input{
+      width: 100%;
+      color: black;
+      border-radius: 5px;
+      border: 1px solid #f6efef;
+      padding: 5px;
+      align-items: center;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Montserrat';
+  font:'Montserrat';
+  }
+  
+  #btn{
+      width: 100%;
+      color:rgb(255, 255, 255);
+      background-color: rgb(92, 65, 118);
+      padding:10px;
+      font-weight: 700;
+      font-size: larger;
+      border-radius: 10px;
+  }
+  form label{
+      color:rgb(255, 255, 255);
+      font-size: 18px;
+      font-weight:500;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Montserrat';
+  font:'Montserrat';
+  }
+  .unlock{
+    color: #ffffff;
+    font:bolder;
+    font-family: 'Seymour One', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font:'Seymour One';
+    font-size: 32px;
+    position: absolute;
+    margin: 0 !important;
+    left: 8%;
+    top: 33%;
+    display: inline-block;
+    z-index: 2;
+  }
+  .welcome{
+    color: #f6efef;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Montserrat';
+  font:'Montserrat';
+  font-size: large;
+  font-size: 22px;;
+  position: absolute;
+  margin: 0 !important;
+  left: 8%;
+  top: 50%;
+  display: inline-block;
+  z-index: 2;
+  }
+  #form.hi {
+    margin-left: 20%;
+    padding:40px;
+    box-shadow: 10px 10px 5px rgb(80, 11, 77);
+    margin-top: 8%;
+    width: 500px;
+border-radius:8px;
+background: linear-gradient(
+  147.63deg,
+  rgba(255, 255, 255, 0.4),
+  rgba(255, 255, 255, 0.14)
+);
+backdrop-filter: blur(30px);
+padding: 20px;
+    text-align: center;
+
+}
+
+/* Additional styling for the h1 tag inside the div */
+#form.hi h1 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Montserrat';
+  font:'Montserrat';
+}
+
+#pomodoro-container {
+  position:absolute;
+  top: 78%;
+  display: flex;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: linear-gradient(
+      147.63deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.01)
+       );
+      backdrop-filter: blur(30px);
+      border: 1px solid #ffffff;
+      transition: width 0.3s ease;
+  justify-content: center;
+flex-direction: column;
+  padding: 10px;
+  width: 600px;
+  cursor: move;
+  height: 40vh;
+  text-align: center;
+  border-radius: 5px;
+}
+h1 {
+font-size: 15px;
+
+}
+
+.main button {
+font-size: 15px;
+padding: 8px;
+border-radius: 10px;
+border-color: #ffffff;
+width: 150px;
+color: rgb(135, 29, 107);
+
+}
+
+.active {
+color: rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);
+border: none;
+
+}
+.timer-area {
+font-size: 60px;
+margin-top: 10px;
+}
+
+.timer-title {
+font-size: 20px;
+margin-bottom: 20px;
+}
+/* Add this to your CSS */
+.notepad-popup {
+  position: fixed;
+  top: 85%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  border-radius: 8px;
+}
+
+.notepad-content {
+  width: 300px;
+  height: 100px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  background-color: #542356;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+#calendarContainer {
+      position: relative;
+      width: 600px;
+      height: 200px;
+  }
+
+#calendarFrame {
+      position: absolute;
+      z-index: 1000;
+      background-color: white;
+      border: 1px solid #ccc;
+      width: 100%;
+      height: 100%;
+      cursor: move;
+      border-radius: 8px;
+  }
+  ::selection {
+color: #fff;
+background: #99458a;
+}
+.wrapper{
+position: relative;
+max-width: 405px;
+max-height: 300px;
+border-radius: 5px;
+padding: 28px 0 30px;
+top: 8%;
+margin-top: 2%;
+left:20%;
+background: linear-gradient(
+      147.63deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.01)
+       );
+      backdrop-filter: blur(30px);
+      border: 1px solid #ffffff;
+      overflow: auto;
+}
+.task-input{
+  height: 52px;
+  padding: 0 25px;
+  position: relative;
+  transition: width 0.3s ease;
+        justify-content: center;
+    flex-direction: column;
+    cursor: move;
+  
+}
+
+.task-input input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 0 20px 0 53px;
+  border: 1px solid #ffffff;
+  color: black;
+}
+.task-input input:focus,
+.task-input input.active{
+  padding-left: 52px;
+  border: 2px solid #561a41;
+}
+.task-input input::placeholder{
+  color: #bfbfbf;
+}
+.controls, li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls{
+  padding: 18px 25px;
+  border-bottom: 1px solid #ccc;
+}
+.filters span{
+  margin: 0 8px;
+  font-size: 17px;
+  color: #444444;
+  cursor: pointer;
+}
+.filters span:first-child{
+  margin-left: 0;
+}
+.filters span.active{
+  color: #521d4a;
+}
+.controls .clear-btn{
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+  background: linear-gradient(135deg, #521d4a 0%, #521d4a 100%);
+}
+.clear-btn.active{
+  opacity: 0.9;
+  pointer-events: auto;
+}
+.clear-btn:active{
+  transform: scale(0.93);
+}
+.task-box{
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 0 20px 10px 25px;
+}
+.task-box.overflow{
+  overflow-y: auto;
+  max-height: 300px;
+}
+.task-box::-webkit-scrollbar{
+  width: 5px;
+}
+.task-box::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.task-box::-webkit-scrollbar-thumb{
+  background: #e6e6e6;
+  border-radius: 25px;
+}
+.task-box .task{
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+}
+.task-box .task:last-child{
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.task-box .task label{
+  display: flex;
+  align-items: flex-start;
+}
+.task label input{
+  margin-top: 7px;
+  accent-color: #572c4a;
+}
+.task label p{
+  user-select: none;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+.task label p.checked{
+  text-decoration: line-through;
+}
+.task-box .settings{
+  position: relative;
+}
+.settings :where(i, li){
+  cursor: pointer;
+}
+.settings .task-menu{
+  z-index: 10;
+  right: -5px;
+  bottom: -65px;
+  padding: 5px 0;
+  background: #fff;
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: top right;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+.task-box .task:last-child .task-menu{
+  bottom: 0;
+  transform-origin: bottom right;
+}
+.task-box .task:first-child .task-menu{
+  bottom: -65px;
+  transform-origin: top right;
+}
+.task-menu.show{
+  transform: scale(1);
+}
+.task-menu li{
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 17px 15px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+.task-menu li:last-child{
+  margin-bottom: 0;
+}
+.settings li:hover{
+  background: #40102b;
+}
+.settings li i{
+  padding-right: 8px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  width: 110px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+  147.63deg,
+  rgba(255, 255, 255, 0.4),
+  rgba(255, 255, 255, 0.01)
+);
+backdrop-filter: blur(30px);
+border: 1px solid #ffffff;
+  transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+  width: 260px;
+}
+
+.sidebar .logo {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  
+  padding: 25px 10px 15px;
+}
+
+.logo img {
+  width: 43px;
+  border-radius: 50%;
+}
+
+.logo h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-left: 15px;
+  display: none;
+}
+
+.sidebar:hover .logo h2 {
+  display: block;
+}
+
+.sidebar .links {
+  list-style: none;
+  margin-top: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  height: calc(100% - 140px);
+  align-items: center;
+  
+}
+
+.sidebar .links::-webkit-scrollbar {
+  display: none;
+  align-items: center;
+}
+
+.links li {
+  display: flex;
+  border-radius: 1px;
+  border-color: #ffffff;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.links li:hover {
+  cursor: pointer;
+  background: #58325E;
+}
+
+.links h4 {
+  color: #ffffff;
+  font-weight: 500;
+  display: none;
+  margin-bottom: 10px;
+}
+
+.sidebar:hover .links h4 {
+  display: block;
+  align-items: center;
+}
+.material-symbols-outlined {
+  margin-left: 0px;
+  align-items: center;
+  width: 43px;
+  border-radius: 50%;
+  padding: 10px;
+}
+.links hr {
+  margin: 10px 8px;
+  border: 1px solid #ffffff;
+}
+
+.sidebar:hover .links hr {
+  border-color: transparent;
+}
+
+.links li span {
+  padding: 22px 15px;
+  align-items: center;
+}
+
+.links li a {
+  padding: 10px;
+  color: #ffffff;
+  display: none;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  align-items: center;
+}
+
+.sidebar:hover .links li a {
+  display: block;
+}
+
+.links .logout-link {
+  margin-top: 20px;
+}
+
+  @media screen and (max-width: 1350px) {
+      #form {
+        width: 40%;
+        margin-left:none;
+        padding:40px;
+      }
+    }
+  @media screen and (max-width: 1100px) {
+      #form {
+        width: 50%;
+        margin-left:none;
+        padding:40px;
+      }
+    }
+  @media screen and (max-width: 700px) {
+      #form {
+        width: 80%;
+        margin-left:none;
+        padding:40px;
+      }
+    }
